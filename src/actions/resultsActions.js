@@ -13,4 +13,4 @@ export const fetchResults = (query) => {
             dispatch({ type: 'FETCH_RESULTS_ERROR', err });
         })
     }
-};
+}; // hello
