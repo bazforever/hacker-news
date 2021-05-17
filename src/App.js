@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import Navbar from './components/Navbar/Navbar';
+import searchResults from './components/searchResults/searchResults';
+import searchHistory from './components/searchHistory/searchHistory';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <Navbar />
+        <div className="container mt-5 text-center">
+          <div className="row">
+            <div className="col-6">
+              <searchResults />
+            </div>
+            <div className="col-6">
+              <searchHistory />
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
 }
 
 export default App;
